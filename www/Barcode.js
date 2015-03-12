@@ -1,4 +1,4 @@
-cordova.define("ayal.cordova.plugins.barcode.Barcode", function(require, exports, module) { "use strict";
+"use strict";
 function Barcode() {
 }
 
