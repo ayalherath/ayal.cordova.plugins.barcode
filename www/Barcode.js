@@ -16,5 +16,3 @@ Barcode.install = function () {
 };
 
 cordova.addConstructor(Barcode.install);
-
-});
