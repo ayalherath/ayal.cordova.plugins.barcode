@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="ayal.cordova.plugins.barcode"
+    version="4.2.9">
+
+   <name>Calendar</name>
+
+   <description>
+     This plugin allows you to manipulate the native reminder.
+   </description>
+
+   <license>MIT</license>
+
+   <engines>
+      <engine name="cordova" version=">=3.0.0" />
+   </engines>
+
+   <js-module src="www/Barcode.js" name="Barcode">
+      <clobbers target="Barcode" />
+   </js-module>
+
+  <js-module src="test/tests.js" name="tests">
+  </js-module>
+
+  <!-- ios -->
+   <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+         <feature name="Barcode">
+            <param name="ios-package" value="Barcode" />
+         </feature>
+      </config-file>
+      <header-file src="src/ios/Barcode.h" />
+      <source-file src="src/ios/Barcode.m" />
+      <header-file src="src/ios/BarcodeViewController.h" />
+      <source-file src="src/ios/BarcodeViewController.m" />
+      <source-file src="src/ios/BarcodeViewController.xib" />
+      <header-file src="src/ios/MTBBarcodeScanner.h" />
+      <source-file src="src/ios/MTBBarcodeScanner.m" />
+      <framework src="AVFoundation.framework" />
+      <framework src="UIKit.framework" />
+   </platform>
+   
+   <!-- android -->
+</plugin>

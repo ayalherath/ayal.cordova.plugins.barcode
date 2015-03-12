@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarcodeViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-rr-zLI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <barButtonItem title="Cancel" id="Ug7-eg-LUm">
+                            <connections>
+                                <action selector="cancelBarcodeReading:" destination="-1" id="DTW-oM-zMp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="9VF-W5-Jge"/>
+                        <barButtonItem title="Light" id="JDi-wh-aVb">
+                            <connections>
+                                <action selector="switchOnLight:" destination="-1" id="25T-vM-4Ed"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0UY-rr-zLI" secondAttribute="trailing" id="Qxh-5q-u6S"/>
+                <constraint firstItem="0UY-rr-zLI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RKs-QS-Nhk"/>
+                <constraint firstAttribute="bottom" secondItem="0UY-rr-zLI" secondAttribute="bottom" constant="28" id="kNM-tZ-FKp">
+                    <variation key="widthClass=compact" constant="0.0"/>
+                </constraint>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="0UY-rr-zLI"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Qxh-5q-u6S"/>
+                    <exclude reference="RKs-QS-Nhk"/>
+                    <exclude reference="kNM-tZ-FKp"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="0UY-rr-zLI"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Qxh-5q-u6S"/>
+                    <include reference="RKs-QS-Nhk"/>
+                    <include reference="kNM-tZ-FKp"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="312" y="507"/>
+        </view>
+    </objects>
+</document>
